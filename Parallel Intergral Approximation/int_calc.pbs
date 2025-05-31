@@ -1,0 +1,77 @@
+#PBS -N int_calc
+#PBS -A tchai8
+#PBS -l nodes=6:ppn=6
+#PBS -l pmem=1gb
+#PBS -l walltime=0.11
+#PBS -q coc-ice-multi
+#PBS -j oe
+#PBS -o int_calc.out
+
+cd $PBS_O_WORKDIR
+make
+
+echo "Running with 2 processes:"
+mpirun -np 2 ./int_calc  1000000
+
+echo "Running with 3 processes:"
+mpirun -np 3 ./int_calc  1000000
+
+echo "Running with 4 processes:"
+mpirun -np 4 ./int_calc  1000000
+
+echo "Running with 5 processes:"
+mpirun -np 5 ./int_calc  1000000
+
+echo "Running with 6 processes:"
+mpirun -np 6 ./int_calc  1000000
+
+echo "Running with 7 processes:"
+mpirun -np 7 ./int_calc  1000000
+
+echo "Running with 8 processes:"
+mpirun -np 8 ./int_calc  1000000
+
+echo "Running with 9 processes:"
+mpirun -np 9 ./int_calc  1000000
+
+echo "Running with 10 processes:"
+mpirun -np 10 ./int_calc  1000000
+
+echo "Running with 12 processes:"
+mpirun -np 12 ./int_calc  1000000
+
+echo "Running with 14 processes:"
+mpirun -np 14 ./int_calc  1000000
+
+echo "Running with 16 processes:"
+mpirun -np 16 ./int_calc  1000000
+
+echo "Running with 18 processes:"
+mpirun -np 18 ./int_calc  1000000
+
+echo "Running with 20 processes:"
+mpirun -np 20 ./int_calc  1000000
+
+echo "Running with 22 processes:"
+mpirun -np 22 ./int_calc  1000000
+
+echo "Running with 24 processes:"
+mpirun -np 24 ./int_calc  1000000
+
+echo "Running with 26 processes:"
+mpirun -np 26 ./int_calc  1000000
+
+echo "Running with 28 processes:"
+mpirun -np 28 ./int_calc  1000000
+
+echo "Running with 30 processes:"
+mpirun -np 30 ./int_calc  1000000
+
+echo "Running with 32 processes:"
+mpirun -np 32 ./int_calc  1000000
+
+echo "Running with 34 processes:"
+mpirun -np 34 ./int_calc  1000000
+
+echo "Running with 36 processes:"
+mpirun -np 36 ./int_calc  1000000
