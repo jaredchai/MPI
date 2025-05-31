@@ -1,0 +1,175 @@
+#PBS -N pqsort
+#PBS -A hren62
+#PBS -l nodes=4:ppn=24
+#PBS -l pmem=1gb
+#PBS -l walltime=30:00
+#PBS -q coc-ice-multi
+#PBS -j oe
+#PBS -o pqsort.outfile
+
+cd $PBS_O_WORKDIR
+
+echo "n = 20000:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_20000.txt outputs/exp_20000_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_20000.txt outputs/exp_20000_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_20000.txt outputs/exp_20000_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_20000.txt outputs/exp_20000_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_20000.txt outputs/exp_20000_np20.txt
+echo "p = 48:"
+mpiexec -np 48 ./pqsort inputs/exp_20000.txt outputs/exp_20000_np48.txt
+echo "p = 96:"
+mpiexec -np 96 ./pqsort inputs/exp_20000.txt outputs/exp_20000_np96.txt
+
+echo "n = 50000:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_50000.txt outputs/exp_50000_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_50000.txt outputs/exp_50000_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_50000.txt outputs/exp_50000_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_50000.txt outputs/exp_50000_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_50000.txt outputs/exp_50000_np20.txt
+echo "p = 50:"
+mpiexec -np 50 ./pqsort inputs/exp_50000.txt outputs/exp_50000_np50.txt
+echo "p = 100:"
+mpiexec -np 100 ./pqsort inputs/exp_50000.txt outputs/exp_50000_np100.txt
+
+echo "n = 100000:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_100000.txt outputs/exp_100000_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_100000.txt outputs/exp_100000_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_100000.txt outputs/exp_100000_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_100000.txt outputs/exp_100000_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_100000.txt outputs/exp_100000_np20.txt
+echo "p = 50:"
+mpiexec -np 50 ./pqsort inputs/exp_100000.txt outputs/exp_100000_np50.txt
+echo "p = 100:"
+mpiexec -np 100 ./pqsort inputs/exp_100000.txt outputs/exp_100000_np100.txt
+
+echo "n = 200000:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np1.txt
+mpiexec -np 1 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np2.txt
+mpiexec -np 2 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np5.txt
+mpiexec -np 5 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np10.txt
+mpiexec -np 10 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np20.txt
+mpiexec -np 20 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np20.txt
+echo "p = 50:"
+mpiexec -np 50 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np50.txt
+mpiexec -np 50 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np50.txt
+echo "p = 100:"
+mpiexec -np 100 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np100.txt
+mpiexec -np 100 ./pqsort inputs/exp_200000.txt outputs/exp_200000_np100.txt
+
+echo "n = 500000:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np1.txt
+mpiexec -np 1 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np2.txt
+mpiexec -np 2 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np5.txt
+mpiexec -np 5 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np10.txt
+mpiexec -np 10 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np20.txt
+mpiexec -np 20 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np20.txt
+echo "p = 50:"
+mpiexec -np 50 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np50.txt
+mpiexec -np 50 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np50.txt
+echo "p = 100:"
+mpiexec -np 100 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np100.txt
+mpiexec -np 100 ./pqsort inputs/exp_500000.txt outputs/exp_500000_np100.txt
+
+echo "n = 1M:"
+echo "n = 1M:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np1.txt
+mpiexec -np 1 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np2.txt
+mpiexec -np 2 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np5.txt
+mpiexec -np 5 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np10.txt
+mpiexec -np 10 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np20.txt
+mpiexec -np 20 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np20.txt
+echo "p = 50:"
+mpiexec -np 50 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np50.txt
+mpiexec -np 50 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np50.txt
+echo "p = 100:"
+mpiexec -np 100 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np100.txt
+mpiexec -np 100 ./pqsort inputs/exp_1M.txt outputs/exp_1M_np100.txt
+
+echo "n = 2M:"
+echo "n = 2M:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np1.txt
+mpiexec -np 1 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np2.txt
+mpiexec -np 2 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np5.txt
+mpiexec -np 5 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np10.txt
+mpiexec -np 10 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np20.txt
+mpiexec -np 20 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np20.txt
+echo "p = 50:"
+mpiexec -np 50 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np50.txt
+mpiexec -np 50 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np50.txt
+echo "p = 100:"
+mpiexec -np 100 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np100.txt
+mpiexec -np 100 ./pqsort inputs/exp_2M.txt outputs/exp_2M_np100.txt
+
+echo "n = 5M:"
+echo "n = 5M:"
+echo "p = 1:"
+mpiexec -np 1 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np1.txt
+mpiexec -np 1 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np1.txt
+echo "p = 2:"
+mpiexec -np 2 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np2.txt
+mpiexec -np 2 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np2.txt
+echo "p = 5:"
+mpiexec -np 5 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np5.txt
+mpiexec -np 5 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np5.txt
+echo "p = 10:"
+mpiexec -np 10 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np10.txt
+mpiexec -np 10 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np10.txt
+echo "p = 20:"
+mpiexec -np 20 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np20.txt
+mpiexec -np 20 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np20.txt
+echo "p = 50:"
+mpiexec -np 50 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np50.txt
+mpiexec -np 50 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np50.txt
+echo "p = 100:"
+mpiexec -np 100 ./pqsort inputs/exp_5M.txt outputs/exp_5M_np100.txt
